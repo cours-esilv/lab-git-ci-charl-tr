@@ -1,4 +1,4 @@
 Enter your details below:
 
-* first_name: Charles
-* last_name: Terrier
+* first_name:
+* last_name:
