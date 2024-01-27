@@ -27,7 +27,6 @@ jobs:
     - name: Run tests
       run: npm test
 
----
 
   build_java:
     runs-on: ubuntu-latest
