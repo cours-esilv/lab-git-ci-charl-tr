@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build_nodejs:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,22 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+---
+
+  build_java:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 8
+      uses: actions/setup-java@v2
+      with:
+        java-version: '8'
+        distribution: 'adopt'
+
+    - name: Build with Maven
+      run: mvn --batch-mode --update-snapshots package
+
